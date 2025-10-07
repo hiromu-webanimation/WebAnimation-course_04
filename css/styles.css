@@ -1,31 +1,27 @@
 @charset "UTF-8";
+/* リキッドレイアウト対応 */
+
 body {
-  font-family: "";
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-body .sp {
-  display: none;
-}
-@media screen and (max-width: 767px) {
-  body .sp {
-    display: block !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  body .pc {
+@media only screen and (min-width: 768px) {
+  .sp {
     display: none !important;
   }
 }
-
-/* リキッドレイアウト対応 */
-html {
-  font-size: 16px;
+@media only screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
 }
 @media (max-width: 375px) {
   html {
     font-size: 4.2666666667vw;
   }
+}
+html {
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   html {
@@ -39,23 +35,24 @@ html {
 }
 
 /* pcの電話番号発信対応 */
+a[href^="tel:"] {
+  pointer-events: none;
+}
 @media screen and (max-width: 767px) {
   a[href^="tel:"] {
-    pointer-events: none;
+    pointer-events: all;
   }
 }
 
-/* ホバー */
 a {
   text-decoration: none;
   color: inherit;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
-@media screen and (max-width: 767px) {
-  a:hover {
-    opacity: 0.8;
-  }
+
+img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 *,
@@ -90,6 +87,7 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Set core body defaults */
@@ -115,11 +113,6 @@ img {
   max-width: 100%;
   display: block;
   width: 100%;
-}
-
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -173,25 +166,63 @@ select::-ms-expand {
   display: none;
 }
 
-.inner {
-  width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-right: auto;
-  margin-left: auto;
+html {
+  word-wrap: break-word;
+}
+
+.mv {
+  position: relative;
+  height: 100vh;
+}
+
+.mv__inner {
+  position: relative;
+  z-index: 2;
+  padding: 0 50px;
+  padding: 0 3.125rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-inline: auto;
 }
 @media screen and (max-width: 767px) {
-  .inner {
-    max-width: 1150px;
-    padding-right: 25px;
-    padding-left: 25px;
+  .mv__inner {
+    max-width: 37.5rem;
+    padding: 0 20px;
   }
 }
 
-.test {
-  font-size: 20px;
-  font-size: 1.25rem;
-  background-color: #111;
-  color: #fff;
+.mv__text {
+  text-align: right;
+  margin-left: auto;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+
+.mv__title {
+  font-size: 44px;
+  font-size: 2.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mv__copy {
+  font-family: "Noto Serif JP", serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.mv__image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 /*# sourceMappingURL=styles.css.map */
