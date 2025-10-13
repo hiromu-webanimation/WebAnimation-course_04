@@ -4,7 +4,7 @@
 }
 
 .section-title__en {
-  font-family: 'Barlow', sans-serif;
+  font-family: var(--barlow-font);
   font-size: rem(90);
   font-weight: var(--medium);
   line-height: 1.2;
@@ -18,7 +18,7 @@
 }
 
 .section-title__jp {
-  font-family: var(--base-font-family);
+  font-family: var(--jp-font);
   font-size: rem(16);
   font-weight: var(--regular);
   line-height: 1.4;
@@ -28,4 +28,3 @@
     font-size: rem(14);
   }
 }
-

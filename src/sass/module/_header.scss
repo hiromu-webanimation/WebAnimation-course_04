@@ -73,7 +73,7 @@
 }
 
 .header__logo-main {
-  font-family: 'Alkatra', serif;
+  font-family: var(--alkatra-font);
   font-size: rem(32);
   font-weight: var(--bold);
   line-height: 1;
@@ -81,7 +81,7 @@
 }
 
 .header__logo-sub {
-  font-family: 'Abel', sans-serif;
+  font-family: var(--abel-font);
   font-size: rem(10);
   font-weight: var(--regular);
   line-height: 1;
@@ -115,7 +115,7 @@
 }
 
 .header__nav-link-en {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--en-font);
   font-size: rem(20);
   font-weight: var(--medium);
   line-height: 1.25;
@@ -124,11 +124,10 @@
 }
 
 .header__nav-link-jp {
-  font-family: var(--base-font-family);
+  font-family: var(--jp-font);
   font-size: rem(12);
   font-weight: var(--regular);
   line-height: 1.4;
   color: var(--white);
   white-space: nowrap;
 }
-

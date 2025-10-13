@@ -11,9 +11,15 @@ $padding-sp: 20px;
 :root {
   // ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
 
+  // フォントファミリー
   --base-font-family: 'Noto Sans JP', sans-serif;
   --second-font-family: 'Montserrat', sans-serif;
   --third-font-family: 'Noto Serif JP', serif;
+  --jp-font: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  --en-font: 'Outfit', sans-serif;
+  --barlow-font: 'Barlow', sans-serif;
+  --abel-font: 'Abel', sans-serif;
+  --alkatra-font: 'Alkatra', serif;
   // ※検証ツールでしっかり反映されているか確認する
 
   // フォントウェイト
