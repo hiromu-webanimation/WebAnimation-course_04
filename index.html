@@ -27,5 +27,406 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script defer src="./js/script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/" class="header__logo-link">
+            <div class="header__logo-icon">
+              <span class="header__logo-icon-rect header__logo-icon-rect--small"></span>
+              <span class="header__logo-icon-rect header__logo-icon-rect--medium"></span>
+              <span class="header__logo-icon-rect header__logo-icon-rect--large"></span>
+            </div>
+            <div class="header__logo-text">
+              <p class="header__logo-main">HSI</p>
+              <p class="header__logo-sub">Harmonic Systems Inc.</p>
+            </div>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#company" class="header__nav-link">
+                <span class="header__nav-link-en">Company</span>
+                <span class="header__nav-link-jp">会社情報</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#service" class="header__nav-link">
+                <span class="header__nav-link-en">Service</span>
+                <span class="header__nav-link-jp">サービス</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#news" class="header__nav-link">
+                <span class="header__nav-link-en">News</span>
+                <span class="header__nav-link-jp">お知らせ</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#recruit" class="header__nav-link">
+                <span class="header__nav-link-en">Recruit</span>
+                <span class="header__nav-link-jp">採用情報</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contact" class="header__nav-link">
+                <span class="header__nav-link-en">Contact</span>
+                <span class="header__nav-link-jp">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- fv -->
+    <section class="fv">
+      <div class="fv__bg"></div>
+      <div class="fv__inner">
+        <div class="fv__content">
+          <h1 class="fv__title">
+            <span class="fv__title-line">人と技術を</span>
+            <span class="fv__title-line">調和でつなぐ</span>
+          </h1>
+          <p class="fv__subtitle">Harmonies with HSI</p>
+        </div>
+        <div class="fv__images">
+          <div class="fv__image fv__image--01">
+            <picture>
+              <source srcset="./images/top/mv1.jpg.webp" type="image/webp" />
+              <img src="./images/top/mv1.jpg" alt="ビジネスシーン" />
+            </picture>
+          </div>
+          <div class="fv__image fv__image--02">
+            <picture>
+              <source srcset="./images/top/mv2.jpg.webp" type="image/webp" />
+              <img src="./images/top/mv2.jpg" alt="ビジネスシーン" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- top-message -->
+    <section class="top-message" id="message">
+      <div class="top-message__inner inner">
+        <div class="top-message__title-wrap">
+          <div class="section-title">
+            <h2 class="section-title__en">Message</h2>
+            <p class="section-title__jp">メッセージ</p>
+          </div>
+        </div>
+        <div class="top-message__content">
+          <div class="top-message__text-wrap">
+            <p class="top-message__text">
+              私たちは「人」をすべての基盤と考え、<br />
+              社員の成長を支え、パートナーとの協力を深め、<br />
+              お客様との信頼を築くことを大切にしています。
+            </p>
+            <p class="top-message__text">
+              人と人とのつながりを通じて新たな価値を創造し、<br />
+              ともに歩むことで生まれる成果を最大化し、<br />
+              社会に貢献する企業であり続けます。
+            </p>
+          </div>
+          <div class="top-message__images">
+            <div class="top-message__image top-message__image--01">
+              <picture>
+                <source srcset="./images/top/message1.jpg.webp" type="image/webp" />
+                <img src="./images/top/message1.jpg" alt="チームミーティングの様子" />
+              </picture>
+            </div>
+            <div class="top-message__image top-message__image--02">
+              <picture>
+                <source srcset="./images/top/message2.jpg.webp" type="image/webp" />
+                <img src="./images/top/message2.jpg" alt="笑顔のチーム" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- top-company -->
+    <section class="top-company" id="company">
+      <div class="top-company__inner inner">
+        <div class="top-company__title-wrap">
+          <div class="section-title">
+            <h2 class="section-title__en">Company</h2>
+            <p class="section-title__jp">会社情報</p>
+          </div>
+        </div>
+        <div class="top-company__content">
+          <ul class="top-company__list">
+            <li class="top-company__item">
+              <a href="#greeting" class="top-company__link">
+                <div class="top-company__link-content">
+                  <span class="top-company__number">01</span>
+                  <span class="top-company__label">ご挨拶</span>
+                </div>
+                <span class="top-company__arrow"></span>
+              </a>
+            </li>
+            <li class="top-company__item">
+              <a href="#overview" class="top-company__link">
+                <div class="top-company__link-content">
+                  <span class="top-company__number">02</span>
+                  <span class="top-company__label">会社概要</span>
+                </div>
+                <span class="top-company__arrow"></span>
+              </a>
+            </li>
+            <li class="top-company__item">
+              <a href="#philosophy" class="top-company__link">
+                <div class="top-company__link-content">
+                  <span class="top-company__number">03</span>
+                  <span class="top-company__label">経営理念</span>
+                </div>
+                <span class="top-company__arrow"></span>
+              </a>
+            </li>
+            <li class="top-company__item">
+              <a href="#partners" class="top-company__link">
+                <div class="top-company__link-content">
+                  <span class="top-company__number">04</span>
+                  <span class="top-company__label">パートナー企業</span>
+                </div>
+                <span class="top-company__arrow"></span>
+              </a>
+            </li>
+            <li class="top-company__item">
+              <a href="#history" class="top-company__link">
+                <div class="top-company__link-content">
+                  <span class="top-company__number">05</span>
+                  <span class="top-company__label">沿革</span>
+                </div>
+                <span class="top-company__arrow"></span>
+              </a>
+            </li>
+            <li class="top-company__item">
+              <a href="#executives" class="top-company__link">
+                <div class="top-company__link-content">
+                  <span class="top-company__number">06</span>
+                  <span class="top-company__label">役員紹介</span>
+                </div>
+                <span class="top-company__arrow"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="top-company__image">
+            <picture>
+              <source srcset="./images/top/company1.jpg.webp" type="image/webp" />
+              <img src="./images/top/company1.jpg" alt="オフィスの様子" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- top-service -->
+    <section class="top-service" id="service">
+      <div class="top-service__inner inner">
+        <div class="top-service__title-wrap">
+          <div class="section-title">
+            <h2 class="section-title__en">Service</h2>
+            <p class="section-title__jp">サービス</p>
+          </div>
+        </div>
+      </div>
+      <div class="top-service__content">
+        <div class="top-service__tabs">
+          <div class="top-service__tab top-service__tab--active">医療・医薬・福祉</div>
+          <div class="top-service__tab">金融・保険</div>
+          <div class="top-service__tab">製造・サービス</div>
+          <div class="top-service__tab">公共・行政</div>
+          <div class="top-service__tab">学校・教育</div>
+        </div>
+        <div class="top-service__panel">
+          <div class="top-service__panel-inner inner">
+            <div class="top-service__panel-content">
+              <div class="top-service__text-wrap">
+                <h3 class="top-service__title">
+                  医療機関連携<br />
+                  プラットフォーム
+                </h3>
+                <p class="top-service__text">
+                  地域や施設を越えて、医療情報を安全かつ迅速に共有できるプラットフォームです。患者の治療を最優先に考えたシステム設計で、医療従事者の協力体制を強化します。<br />
+                  最新技術と信頼のネットワークで、医療の現場に新たな価値を届けます。
+                </p>
+                <a href="#service-detail" class="top-service__button">
+                  <span>詳しく見る</span>
+                  <span class="top-service__button-icon"></span>
+                </a>
+              </div>
+              <div class="top-service__image">
+                <picture>
+                  <source srcset="./images/top/service1.jpg.webp" type="image/webp" />
+                  <img src="./images/top/service1.jpg" alt="医療機関連携プラットフォーム" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- top-news -->
+    <section class="top-news" id="news">
+      <div class="top-news__inner inner">
+        <div class="top-news__header">
+          <div class="top-news__title-wrap">
+            <div class="section-title">
+              <h2 class="section-title__en">News</h2>
+              <p class="section-title__jp">お知らせ</p>
+            </div>
+          </div>
+          <a href="#news-list" class="top-news__button">
+            <span>詳しく見る</span>
+            <span class="top-news__button-icon"></span>
+          </a>
+        </div>
+        <ul class="top-news__list">
+          <li class="top-news__item">
+            <a href="#news-detail" class="top-news__link">
+              <div class="top-news__meta">
+                <time class="top-news__date" datetime="2024-12-11">2024.12.11</time>
+                <span class="top-news__category">お知らせ</span>
+              </div>
+              <p class="top-news__text">スマートアプリ「E-Doc」が「ナイススタイル大賞」の特別賞を受賞</p>
+            </a>
+          </li>
+          <li class="top-news__item">
+            <a href="#news-detail" class="top-news__link">
+              <div class="top-news__meta">
+                <time class="top-news__date" datetime="2024-11-23">2024.11.23</time>
+                <span class="top-news__category">イベント</span>
+              </div>
+              <p class="top-news__text">金融業界におけるセキュリティ強化のためのシステム連携セミナーを開催いたします</p>
+            </a>
+          </li>
+          <li class="top-news__item">
+            <a href="#news-detail" class="top-news__link">
+              <div class="top-news__meta">
+                <time class="top-news__date" datetime="2024-10-01">2024.10.01</time>
+                <span class="top-news__category">組織・人事</span>
+              </div>
+              <p class="top-news__text">人事異動および機構改革のお知らせ</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- top-recruit -->
+    <section class="top-recruit" id="recruit">
+      <div class="top-recruit__images">
+        <div class="top-recruit__image">
+          <picture>
+            <source srcset="./images/top/recruit0.jpg.webp" type="image/webp" />
+            <img src="./images/top/recruit0.jpg" alt="採用情報" />
+          </picture>
+        </div>
+        <div class="top-recruit__image">
+          <picture>
+            <source srcset="./images/top/recruit1.jpg.webp" type="image/webp" />
+            <img src="./images/top/recruit1.jpg" alt="採用情報" />
+          </picture>
+        </div>
+        <div class="top-recruit__image">
+          <picture>
+            <source srcset="./images/top/recruit3.jpg.webp" type="image/webp" />
+            <img src="./images/top/recruit3.jpg" alt="採用情報" />
+          </picture>
+        </div>
+      </div>
+      <div class="top-recruit__content">
+        <div class="top-recruit__content-inner">
+          <div class="top-recruit__title-wrap">
+            <h2 class="top-recruit__title-en">Recruit</h2>
+            <p class="top-recruit__title-jp">採用情報</p>
+          </div>
+          <p class="top-recruit__text">「人を大切にする」という理念のもと、私たちはお客様に最適なソリューションを提供しています。そのために、チームで課題を解決しながら共に成長し、未来を築いていく仲間を求めています。</p>
+          <a href="#recruit-detail" class="top-recruit__button">
+            <span>詳しく見る</span>
+            <span class="top-recruit__button-icon"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- top-contact -->
+    <section class="top-contact" id="contact">
+      <div class="top-contact__inner inner">
+        <div class="top-contact__title-wrap">
+          <div class="section-title">
+            <h2 class="section-title__en">Contact</h2>
+            <p class="section-title__jp">お問い合わせ</p>
+          </div>
+        </div>
+        <div class="top-contact__content">
+          <p class="top-contact__text">
+            ご相談、お問い合わせは<br />
+            こちらからお気軽にご連絡ください。
+          </p>
+          <a href="#contact-form" class="top-contact__button">
+            <span>お問い合わせ</span>
+            <span class="top-contact__arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <div class="footer__logo">
+          <div class="footer__logo-icon">
+            <span class="footer__logo-icon-rect footer__logo-icon-rect--small"></span>
+            <span class="footer__logo-icon-rect footer__logo-icon-rect--medium"></span>
+            <span class="footer__logo-icon-rect footer__logo-icon-rect--large"></span>
+          </div>
+          <div class="footer__logo-text">
+            <p class="footer__logo-main">HSI</p>
+            <p class="footer__logo-sub">Harmonic Systems Inc.</p>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__nav-column">
+            <h3 class="footer__nav-title">サービス</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a href="#service-1" class="footer__nav-link">医療・医薬・福祉</a></li>
+              <li class="footer__nav-item"><a href="#service-2" class="footer__nav-link">金融・保険</a></li>
+              <li class="footer__nav-item"><a href="#service-3" class="footer__nav-link">製造・サービス</a></li>
+              <li class="footer__nav-item"><a href="#service-4" class="footer__nav-link">公共・行政</a></li>
+              <li class="footer__nav-item"><a href="#service-5" class="footer__nav-link">学校・教育</a></li>
+            </ul>
+            <h3 class="footer__nav-title">お知らせ</h3>
+          </div>
+          <div class="footer__nav-column">
+            <h3 class="footer__nav-title">会社情報</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a href="#greeting" class="footer__nav-link">ご挨拶</a></li>
+              <li class="footer__nav-item"><a href="#overview" class="footer__nav-link">会社概要</a></li>
+              <li class="footer__nav-item"><a href="#philosophy" class="footer__nav-link">経営理念</a></li>
+              <li class="footer__nav-item"><a href="#partners" class="footer__nav-link">パートナー企業</a></li>
+              <li class="footer__nav-item"><a href="#history" class="footer__nav-link">沿革</a></li>
+              <li class="footer__nav-item"><a href="#executives" class="footer__nav-link">役員紹介</a></li>
+            </ul>
+            <h3 class="footer__nav-title">採用情報</h3>
+          </div>
+          <div class="footer__nav-column">
+            <ul class="footer__nav-list footer__nav-list--single">
+              <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">お問い合わせ</a></li>
+              <li class="footer__nav-item"><a href="#partners-list" class="footer__nav-link">パートナー企業一覧</a></li>
+              <li class="footer__nav-item"><a href="#privacy" class="footer__nav-link">プライバシーポリシー</a></li>
+              <li class="footer__nav-item"><a href="#antisocial" class="footer__nav-link">反社会的勢力に対する基本方針</a></li>
+              <li class="footer__nav-item"><a href="#disclaimer" class="footer__nav-link">免責事項</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

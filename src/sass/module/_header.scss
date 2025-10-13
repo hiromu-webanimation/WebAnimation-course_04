@@ -1,0 +1,133 @@
+@use 'global' as *;
+
+.header {
+  background-color: #184473;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(18) rem(16);
+  max-width: rem(1440);
+  margin-inline: auto;
+}
+
+.header__logo {
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  text-decoration: none;
+}
+
+.header__logo-icon {
+  position: relative;
+  width: rem(29);
+  height: rem(22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-icon-rect {
+  position: absolute;
+  background-color: var(--white);
+  border: 1px solid #184473;
+  transform: rotate(-5.74deg);
+}
+
+.header__logo-icon-rect--small {
+  width: rem(12);
+  height: rem(8);
+  top: rem(5);
+  left: rem(7);
+}
+
+.header__logo-icon-rect--medium {
+  width: rem(18);
+  height: rem(11);
+  top: 0;
+  left: rem(11);
+}
+
+.header__logo-icon-rect--large {
+  width: rem(18);
+  height: rem(11);
+  bottom: 0;
+  left: 0;
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(1);
+}
+
+.header__logo-main {
+  font-family: 'Alkatra', serif;
+  font-size: rem(32);
+  font-weight: var(--bold);
+  line-height: 1;
+  color: var(--white);
+}
+
+.header__logo-sub {
+  font-family: 'Abel', sans-serif;
+  font-size: rem(10);
+  font-weight: var(--regular);
+  line-height: 1;
+  color: var(--white);
+}
+
+.header__nav {
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: rem(40);
+}
+
+.header__nav-item {
+}
+
+.header__nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.header__nav-link-en {
+  font-family: 'Outfit', sans-serif;
+  font-size: rem(20);
+  font-weight: var(--medium);
+  line-height: 1.25;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.header__nav-link-jp {
+  font-family: var(--base-font-family);
+  font-size: rem(12);
+  font-weight: var(--regular);
+  line-height: 1.4;
+  color: var(--white);
+  white-space: nowrap;
+}

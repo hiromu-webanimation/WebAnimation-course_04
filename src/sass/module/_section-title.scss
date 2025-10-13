@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+.section-title {
+}
+
+.section-title__en {
+  font-family: 'Barlow', sans-serif;
+  font-size: rem(90);
+  font-weight: var(--medium);
+  line-height: 1.2;
+  background: linear-gradient(90deg, #184473 0%, #468ea8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  @include mq {
+    font-size: rem(60);
+  }
+}
+
+.section-title__jp {
+  font-family: var(--base-font-family);
+  font-size: rem(16);
+  font-weight: var(--regular);
+  line-height: 1.4;
+  color: #31363a;
+  margin-top: rem(8);
+  @include mq {
+    font-size: rem(14);
+  }
+}
