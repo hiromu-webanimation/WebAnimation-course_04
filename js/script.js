@@ -1,5 +1,5 @@
-
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
+  // この中であればWordpressでも「$」が使用可能になる
 
   var topBtn = $('.pagetop');
   topBtn.hide();
@@ -17,9 +17,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
+    $('body,html').animate(
+      {
+        scrollTop: 0,
+      },
+      300,
+      'swing'
+    );
     return false;
   });
 
@@ -35,17 +39,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   //ドロワーメニュー
-  $("#MenuButton").click(function () {
+  $('#MenuButton').click(function () {
     // $(".l-drawer-menu").toggleClass("is-show");
     // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-
+    $('.js-drawer-open').toggleClass('open');
+    $('.drawer-menu').toggleClass('open');
+    $('html').toggleClass('is-fixed');
   });
-
-
-
-  
-
 });
