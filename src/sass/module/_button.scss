@@ -1,0 +1,58 @@
+@use 'global' as *;
+.button {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  margin-top: rem(50);
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+  @include mq {
+    margin-top: rem(30);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.button span:first-child {
+  font-family: var(--jp-font);
+  font-size: rem(16);
+  font-weight: var(--regular);
+  line-height: 1;
+  color: var(--white);
+  @include mq {
+    font-size: rem(14);
+  }
+}
+
+.button__icon {
+  display: block;
+  width: rem(56);
+  height: rem(56);
+  border-radius: 50%;
+  background-color: #1d7699;
+  position: relative;
+  @include mq {
+    width: rem(44);
+    height: rem(44);
+  }
+}
+
+.button__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: rem(12);
+  height: rem(12);
+  border-top: 2px solid var(--white);
+  border-right: 2px solid var(--white);
+  transform: translate(-40%, -50%) rotate(45deg);
+  @include mq {
+    width: rem(10);
+    height: rem(10);
+  }
+}

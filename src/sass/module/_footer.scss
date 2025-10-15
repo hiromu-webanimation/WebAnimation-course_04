@@ -1,8 +1,9 @@
 @use 'global' as *;
 
 .footer {
+  margin-top: rem(-160);
   background: linear-gradient(90deg, #184473 2.813%, #20476a 49.961%, #225c70 97.109%);
-  padding: rem(100) 0 rem(80);
+  padding: rem(260) 0 rem(80);
   @include mq {
     padding: rem(60) 0 rem(50);
   }
