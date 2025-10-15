@@ -11,11 +11,8 @@
   min-height: rem(750);
   overflow: hidden;
   max-height: rem(850);
-  margin-bottom: rem(150);
-
-  @include mq {
-    height: rem(600);
-  }
+  margin-bottom: rem(130);
+  padding-bottom: rem(30);
 }
 
 .fv__bg {
@@ -23,7 +20,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - rem(70));
+  height: calc(100% - rem(100));
   background: linear-gradient(90deg, #184473 2.813%, #20476a 49.961%, #225c70 97.109%);
 }
 
@@ -638,7 +635,7 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: rem(288);
+  width: rem(257);
 }
 
 .top-contact__title-wrap {
@@ -649,7 +646,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: rem(50);
+  gap: rem(30);
 }
 
 .top-contact__text {
@@ -663,8 +660,10 @@
 .top-contact__button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: rem(14);
-  padding: rem(14) rem(80);
+  padding: rem(14) rem(30);
+  min-width: rem(330);
   background-color: #184473;
   border-radius: rem(40);
   text-decoration: none;
@@ -684,7 +683,7 @@
   font-family: var(--jp-font);
   font-size: rem(24);
   font-weight: var(--regular);
-  line-height: 1;
+  line-height: 1.4;
   color: var(--white);
   @include mq {
     font-size: rem(18);
@@ -695,9 +694,9 @@
   display: block;
   width: rem(10);
   height: rem(12);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='13' viewBox='0 0 10 13' fill='none'%3E%3Cpath d='M1 1L9 6.5L1 12' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  flex-shrink: 0;
+  background-color: var(--white);
+  mask-image: url('../images/top/arrow2.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
