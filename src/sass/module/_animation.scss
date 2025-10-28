@@ -1,0 +1,27 @@
+@use 'global' as *;
+.js-section-title-en {
+}
+
+.js-section-title-jp {
+  position: relative;
+  --clip: inset(0% 100% 0% 0%);
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: rem(-10);
+    left: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #184473 0%, #468ea8 100%);
+    clip-path: var(--clip);
+  }
+}
+
+.js-parallax-x {
+  overflow: hidden;
+  img {
+    width: calc(100% + rem(30));
+    max-width: unset;
+  }
+}

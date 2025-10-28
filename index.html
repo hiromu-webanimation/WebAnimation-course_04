@@ -25,8 +25,11 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script defer src="./js/script.js"></script>
   </head>
   <body>
@@ -161,9 +164,9 @@
         <div class="top-message__content">
           <div class="top-message__text-wrap">
             <div class="top-message__title-wrap">
-              <div class="section-title">
-                <h2 class="section-title__en">Message</h2>
-                <p class="section-title__jp">メッセージ</p>
+              <div class="section-title js-section-title">
+                <h2 class="section-title__en js-section-title-en">Message</h2>
+                <p class="section-title__jp js-section-title-jp">メッセージ</p>
               </div>
             </div>
             <p class="top-message__text">
@@ -199,51 +202,51 @@
     <section class="top-company" id="company">
       <div class="top-company__inner inner">
         <div class="top-company__title-wrap">
-          <div class="section-title">
-            <h2 class="section-title__en">Company</h2>
-            <p class="section-title__jp">会社情報</p>
+          <div class="section-title js-section-title">
+            <h2 class="section-title__en js-section-title-en">Company</h2>
+            <p class="section-title__jp js-section-title-jp">会社情報</p>
           </div>
         </div>
         <div class="top-company__content">
-          <ul class="top-company__list">
-            <li class="top-company__item">
+          <ul class="top-company__list js-stagger">
+            <li class="top-company__item js-stagger-item">
               <a href="#greeting" class="top-company__link">
                 <div class="top-company__label">ご挨拶</div>
                 <span class="top-company__arrow"></span>
               </a>
             </li>
-            <li class="top-company__item">
+            <li class="top-company__item js-stagger-item">
               <a href="#overview" class="top-company__link">
                 <div class="top-company__label">会社概要</div>
                 <span class="top-company__arrow"></span>
               </a>
             </li>
-            <li class="top-company__item">
+            <li class="top-company__item js-stagger-item">
               <a href="#philosophy" class="top-company__link">
                 <div class="top-company__label">経営理念</div>
                 <span class="top-company__arrow"></span>
               </a>
             </li>
-            <li class="top-company__item">
+            <li class="top-company__item js-stagger-item">
               <a href="#partners" class="top-company__link">
                 <div class="top-company__label">パートナー企業</div>
                 <span class="top-company__arrow"></span>
               </a>
             </li>
-            <li class="top-company__item">
+            <li class="top-company__item js-stagger-item">
               <a href="#history" class="top-company__link">
                 <div class="top-company__label">沿革</div>
                 <span class="top-company__arrow"></span>
               </a>
             </li>
-            <li class="top-company__item">
+            <li class="top-company__item js-stagger-item">
               <a href="#executives" class="top-company__link">
                 <div class="top-company__label">役員紹介</div>
                 <span class="top-company__arrow"></span>
               </a>
             </li>
           </ul>
-          <div class="top-company__image">
+          <div class="top-company__image js-parallax-x">
             <picture>
               <source srcset="./images/top/company1.jpg.webp" type="image/webp" />
               <img src="./images/top/company1.jpg" alt="オフィスの様子" />
@@ -257,9 +260,9 @@
     <section class="top-service" id="service">
       <div class="top-service__inner inner">
         <div class="top-service__title-wrap">
-          <div class="section-title">
-            <h2 class="section-title__en">Service</h2>
-            <p class="section-title__jp">サービス</p>
+          <div class="section-title js-section-title">
+            <h2 class="section-title__en js-section-title-en">Service</h2>
+            <p class="section-title__jp js-section-title-jp">サービス</p>
           </div>
         </div>
       </div>
@@ -420,9 +423,9 @@
         <div class="top-news__content">
           <div class="top-news__texts">
             <div class="top-news__title-wrap">
-              <div class="section-title">
-                <h2 class="section-title__en">News</h2>
-                <p class="section-title__jp">お知らせ</p>
+              <div class="section-title js-section-title">
+                <h2 class="section-title__en js-section-title-en">News</h2>
+                <p class="section-title__jp js-section-title-jp">お知らせ</p>
               </div>
             </div>
             <a href="#news-list" class="top-news__button button">
@@ -430,8 +433,8 @@
               <span class="button__icon"></span>
             </a>
           </div>
-          <ul class="top-news__list">
-            <li class="top-news__item">
+          <ul class="top-news__list js-stagger">
+            <li class="top-news__item js-stagger-item">
               <a href="#news-detail" class="top-news__link">
                 <div class="top-news__meta">
                   <time class="top-news__date" datetime="2024-12-11">2024.12.11</time>
@@ -440,7 +443,7 @@
                 <h3 class="top-news__text">スマートアプリ「E-Doc」が「ナイススタイル大賞」の特別賞を受賞</h3>
               </a>
             </li>
-            <li class="top-news__item">
+            <li class="top-news__item js-stagger-item">
               <a href="#news-detail" class="top-news__link">
                 <div class="top-news__meta">
                   <time class="top-news__date" datetime="2024-11-23">2024.11.23</time>
@@ -449,7 +452,7 @@
                 <h3 class="top-news__text">金融業界におけるセキュリティ強化のためのシステム連携セミナーを開催いたします</h3>
               </a>
             </li>
-            <li class="top-news__item">
+            <li class="top-news__item js-stagger-item">
               <a href="#news-detail" class="top-news__link">
                 <div class="top-news__meta">
                   <time class="top-news__date" datetime="2024-10-01">2024.10.01</time>
@@ -485,13 +488,31 @@
               <img src="./images/top/recruit3.jpg" alt="採用情報" />
             </picture>
           </div>
+          <div class="top-recruit__image">
+            <picture>
+              <source srcset="./images/top/recruit0.jpg.webp" type="image/webp" />
+              <img src="./images/top/recruit0.jpg" alt="採用情報" />
+            </picture>
+          </div>
+          <div class="top-recruit__image">
+            <picture>
+              <source srcset="./images/top/recruit1.jpg.webp" type="image/webp" />
+              <img src="./images/top/recruit1.jpg" alt="採用情報" />
+            </picture>
+          </div>
+          <div class="top-recruit__image">
+            <picture>
+              <source srcset="./images/top/recruit3.jpg.webp" type="image/webp" />
+              <img src="./images/top/recruit3.jpg" alt="採用情報" />
+            </picture>
+          </div>
         </div>
         <div class="top-recruit__content">
           <div class="top-recruit__content-wrap">
             <div class="top-recruit__content-inner">
-              <div class="top-recruit__title-wrap">
-                <h2 class="top-recruit__title-en">Recruit</h2>
-                <p class="top-recruit__title-jp">採用情報</p>
+              <div class="top-recruit__title-wrap js-section-title">
+                <h2 class="top-recruit__title-en js-section-title-en">Recruit</h2>
+                <p class="top-recruit__title-jp js-section-title-jp">採用情報</p>
               </div>
               <p class="top-recruit__text">「人を大切にする」という理念のもと、私たちはお客様に最適なソリューションを提供しています。そのために、チームで課題を解決しながら共に成長し、未来を築いていく仲間を求めています。</p>
               <a href="#recruit-detail" class="top-recruit__button button">
@@ -509,9 +530,9 @@
       <div class="top-contact__inner">
         <div class="top-contact__wrap">
           <div class="top-contact__title-wrap">
-            <div class="section-title">
-              <h2 class="section-title__en">Contact</h2>
-              <p class="section-title__jp">お問い合わせ</p>
+            <div class="section-title js-section-title">
+              <h2 class="section-title__en js-section-title-en">Contact</h2>
+              <p class="section-title__jp js-section-title-jp">お問い合わせ</p>
             </div>
           </div>
           <div class="top-contact__content">

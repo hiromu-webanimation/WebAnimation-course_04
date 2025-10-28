@@ -49,6 +49,8 @@
   margin-bottom: rem(140);
   flex-grow: 1;
   width: 20%;
+  position: relative;
+  z-index: 2;
 }
 
 .fv__title {
@@ -101,7 +103,6 @@
 
 .top-message {
   margin-bottom: rem(180);
-  overflow: hidden;
 }
 
 .top-message__inner {
@@ -146,12 +147,16 @@
   margin-left: auto;
   aspect-ratio: 540/405;
   width: rem(540);
+  position: relative;
+  z-index: 1;
 }
 
 .top-message__image--02 {
   margin-top: rem(-195);
   aspect-ratio: 357/290;
   width: rem(357);
+  position: relative;
+  z-index: 2;
 }
 
 // ====================================
@@ -332,8 +337,20 @@
   padding: rem(100) 0;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .top-service__panel--active {
   display: block;
+  & .top-service__panel-inner {
+    animation: fadeIn 0.5s ease-in-out;
+  }
 }
 
 .top-service__panel-inner {
@@ -521,13 +538,24 @@
   position: relative;
 }
 
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - rem(12)));
+  }
+}
+
 .top-recruit__images {
-  display: grid;
-  grid-template-columns: repeat(3, rem(782));
-  gap: rem(23);
+  display: flex;
+  gap: rem(24);
+  width: fit-content;
+  animation: slider 30s linear infinite;
 }
 
 .top-recruit__image {
+  width: rem(782);
   aspect-ratio: 782/642;
 }
 
@@ -582,6 +610,9 @@
   line-height: 1.4;
   color: var(--white);
   margin-top: rem(8);
+  &::after {
+    background: white;
+  }
   @include mq {
     font-size: rem(14);
   }
