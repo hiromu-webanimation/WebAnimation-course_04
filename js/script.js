@@ -176,6 +176,9 @@ jQuery(function ($) {
       },
     }
   );
+
+  // company セクション============
+  // パララックス
   let parallaxs = document.querySelectorAll('.js-parallax-x');
   parallaxs.forEach((parallax) => {
     gsap.fromTo(
@@ -194,6 +197,25 @@ jQuery(function ($) {
       }
     );
   });
+
+  // あしらい
+  gsap.fromTo(
+    '.top-company__list-dec rect',
+    {
+      fill: '#b4d5fc',
+    },
+    {
+      fill: '#f4f9ff',
+      stagger: {
+        each: 0.1,
+        from: 'start',
+      },
+      scrollTrigger: {
+        trigger: '.top-company__list-dec',
+        start: 'top 90%',
+      },
+    }
+  );
 
   // recruit セクション============
   gsap.fromTo(
@@ -224,4 +246,50 @@ jQuery(function ($) {
       y: 0,
     }
   );
+
+  // ローダーアニメーション
+  const loaderTl = gsap.timeline();
+
+  // 四角形のアニメーション
+  loaderTl
+    .from('.rect-1', {
+      stroke: '#ffffff',
+      transform: 'translate(40px, 22px) rotate(90deg) scale(1.8)',
+    })
+    .from(
+      '.rect-2',
+      {
+        stroke: '#ffffff',
+        transform: 'translate(43px, 24px) rotate(90deg) scale(2.6)',
+      },
+      '-=0.5'
+    )
+    .from(
+      '.rect-3',
+      {
+        stroke: '#ffffff',
+        transform: 'translate(40px, 22px) rotate(90deg) scale(1.8)',
+      },
+      '-=0.5'
+    )
+    .to(
+      '.text',
+      {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      },
+      '-=0.3'
+    )
+    .to(
+      '.text-top',
+      {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      },
+      '-=0.2'
+    );
+
+  // op
 });

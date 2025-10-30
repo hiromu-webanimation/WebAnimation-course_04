@@ -1,5 +1,6 @@
 @use 'global' as *;
 
+
 // ====================================
 // FV
 // ====================================
@@ -206,19 +207,20 @@
   width: rem(440);
   counter-reset: number 0;
   position: relative;
+  z-index: 1;
 }
 
-.top-company__list::before {
-  content: '';
+.top-company__list-dec {
   position: absolute;
   bottom: rem(-50);
   left: 0;
   aspect-ratio: 640/220;
   width: rem(640);
-  background-image: url('../images/top/company-dec.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
   z-index: 1;
+}
+
+.top-company__list-dec rect {
+  fill: #b4d5fc;
 }
 
 .top-company__item {
@@ -275,6 +277,8 @@
 .top-company__image {
   width: rem(558);
   aspect-ratio: 558/633;
+  position: relative;
+  z-index: 2;
 }
 
 // ====================================
