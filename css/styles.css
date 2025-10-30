@@ -185,14 +185,37 @@ html {
 
 .loader__logo {
   aspect-ratio: 91/55;
-  width: 150px;
-  width: 9.375rem;
+  width: 250px;
+  width: 15.625rem;
 }
 
 .loader__logo svg * {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
+}
+
+.fv__image {
+  overflow: hidden;
+  position: relative;
+  --clip: inset(0% 0% 0% 0%);
+}
+.fv__image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#184473), to(#468ea8));
+  background: linear-gradient(0deg, #184473 0%, #468ea8 100%);
+  -webkit-clip-path: var(--clip);
+          clip-path: var(--clip);
+}
+
+.fv__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .rect-1,
@@ -552,8 +575,6 @@ html {
 .network-animation__line {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  -webkit-animation: drawLine 2s ease-in-out forwards;
-          animation: drawLine 2s ease-in-out forwards;
 }
 
 .network-animation__dot {
@@ -562,10 +583,12 @@ html {
           transform-origin: center;
   opacity: 0;
   transform-origin: center;
-  -webkit-animation: fadeInDot 1s ease-in-out forwards;
-          animation: fadeInDot 1s ease-in-out forwards;
 }
 
+.network-animation.is-active .network-animation__line {
+  -webkit-animation: drawLine 2s ease-in-out forwards;
+          animation: drawLine 2s ease-in-out forwards;
+}
 @-webkit-keyframes drawLine {
   0% {
     stroke-dashoffset: 1000;
@@ -574,7 +597,6 @@ html {
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes drawLine {
   0% {
     stroke-dashoffset: 1000;
@@ -599,144 +621,117 @@ html {
     opacity: 1;
   }
 }
-.network-animation__line:nth-child(1) {
-  -webkit-animation-delay: 1.1s;
-          animation-delay: 1.1s;
+.network-animation.is-active .network-animation__line:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
-
-.network-animation__line:nth-child(2) {
-  -webkit-animation-delay: 1.7s;
-          animation-delay: 1.7s;
+.network-animation.is-active .network-animation__line:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(3) {
-  -webkit-animation-delay: 1.9s;
-          animation-delay: 1.9s;
+.network-animation.is-active .network-animation__line:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(4) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
+.network-animation.is-active .network-animation__line:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(5) {
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
+.network-animation.is-active .network-animation__line:nth-child(5) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(6) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+.network-animation.is-active .network-animation__line:nth-child(6) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
-
-.network-animation__line:nth-child(7) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+.network-animation.is-active .network-animation__line:nth-child(7) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(8) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+.network-animation.is-active .network-animation__line:nth-child(8) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(9) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+.network-animation.is-active .network-animation__line:nth-child(9) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(10) {
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+.network-animation.is-active .network-animation__line:nth-child(10) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
-
-.network-animation__line:nth-child(11) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+.network-animation.is-active .network-animation__line:nth-child(11) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(12) {
-  -webkit-animation-delay: 1.9s;
-          animation-delay: 1.9s;
+.network-animation.is-active .network-animation__line:nth-child(12) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(13) {
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+.network-animation.is-active .network-animation__line:nth-child(13) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
-
-.network-animation__line:nth-child(14) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+.network-animation.is-active .network-animation__line:nth-child(14) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(15) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+.network-animation.is-active .network-animation__line:nth-child(15) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(16) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+.network-animation.is-active .network-animation__line:nth-child(16) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(17) {
-  -webkit-animation-delay: 2.3s;
-          animation-delay: 2.3s;
+.network-animation.is-active .network-animation__line:nth-child(17) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(18) {
-  -webkit-animation-delay: 2.3s;
-          animation-delay: 2.3s;
+.network-animation.is-active .network-animation__line:nth-child(18) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(19) {
-  -webkit-animation-delay: 2.3s;
-          animation-delay: 2.3s;
+.network-animation.is-active .network-animation__line:nth-child(19) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(20) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+.network-animation.is-active .network-animation__line:nth-child(20) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(21) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+.network-animation.is-active .network-animation__line:nth-child(21) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(22) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+.network-animation.is-active .network-animation__line:nth-child(22) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(23) {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+.network-animation.is-active .network-animation__line:nth-child(23) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(24) {
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+.network-animation.is-active .network-animation__line:nth-child(24) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(25) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+.network-animation.is-active .network-animation__line:nth-child(25) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
-
-.network-animation__line:nth-child(26) {
-  -webkit-animation-delay: 1.3s;
-          animation-delay: 1.3s;
+.network-animation.is-active .network-animation__line:nth-child(26) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(27) {
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
+.network-animation.is-active .network-animation__line:nth-child(27) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-
-.network-animation__line:nth-child(28) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+.network-animation.is-active .network-animation__line:nth-child(28) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .section-title {

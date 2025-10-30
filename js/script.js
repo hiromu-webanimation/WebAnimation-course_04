@@ -249,47 +249,190 @@ jQuery(function ($) {
 
   // ローダーアニメーション
   const loaderTl = gsap.timeline();
-
+  gsap.set('.loader__logo', {
+    scale: 2,
+  });
+  gsap.set('.rect-wrap', {
+    clipPath: 'inset(100% 0%  0% 0%)',
+  });
   // 四角形のアニメーション
   loaderTl
-    .from('.rect-1', {
-      stroke: '#ffffff',
-      transform: 'translate(40px, 22px) rotate(90deg) scale(1.8)',
+    .to('.rect-wrap', {
+      clipPath: 'inset(0% 0%  0% 0%)',
+      ease: 'power4.inOut',
+      duration: 1,
     })
+    .to(
+      '.loader__logo',
+      {
+        scale: 1,
+      },
+      '+=0.2'
+    )
+    .from(
+      '.rect-1',
+      {
+        stroke: '#ffffff',
+        transform: 'translate(40px, 22px) rotate(90deg) scale(1.8)',
+        ease: 'power2.inOut',
+        duration: 0.8,
+      },
+      '<'
+    )
+
     .from(
       '.rect-2',
       {
         stroke: '#ffffff',
         transform: 'translate(43px, 24px) rotate(90deg) scale(2.6)',
+        ease: 'power2.inOut',
+        duration: 0.8,
       },
-      '-=0.5'
+      '<-0.2'
     )
     .from(
       '.rect-3',
       {
         stroke: '#ffffff',
         transform: 'translate(40px, 22px) rotate(90deg) scale(1.8)',
+        ease: 'power2.inOut',
+        duration: 0.8,
       },
-      '-=0.5'
+      '<-0.2'
     )
-    .to(
+    .fromTo(
       '.text',
       {
+        y: -5,
+        clipPath: 'inset(100% 0%  0% 0%)',
+      },
+      {
+        clipPath: 'inset(0% 0%  0% 0%)',
+        y: 0,
         opacity: 1,
         duration: 0.5,
         ease: 'power2.inOut',
+      },
+      '-=0.4'
+    )
+    .fromTo(
+      '.text-top',
+      {
+        x: -5,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      },
+      '<'
+    )
+    .to(
+      '.loader__logo',
+      {
+        y: -5,
+        opacity: 0,
+      },
+      '+=0.7'
+    )
+    .to(
+      '.loader',
+      {
+        clipPath: 'inset(0% 0%  100% 0%)',
+        duration: 1,
+        ease: 'power4.inOut',
       },
       '-=0.3'
     )
-    .to(
-      '.text-top',
-      {
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power2.inOut',
-      },
-      '-=0.2'
-    );
 
-  // op
+    // op
+
+    .fromTo(
+      '.fv__image',
+      {
+        clipPath: 'inset(100% 0% 0% 0%)',
+      },
+      {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        duration: 1,
+        ease: 'power4.inOut',
+        stagger: 0.06,
+      },
+      '-=0.8'
+    )
+
+    .fromTo(
+      '.fv__title-line',
+      {
+        yPercent: 100,
+        clipPath: 'inset(0% 0%  100% 0%)',
+      },
+
+      {
+        yPercent: 0,
+        clipPath: 'inset(0% 0%  0% 0%)',
+        duration: 1,
+        ease: 'power4.inOut',
+      },
+      '<'
+    )
+    .fromTo(
+      '.fv__subtitle',
+      {
+        yPercent: 100,
+        clipPath: 'inset(0% 0%  100% 0%)',
+      },
+      {
+        yPercent: 0,
+        clipPath: 'inset(0% 0%  0% 0%)',
+        duration: 1,
+        ease: 'power4.inOut',
+      },
+      '<'
+    )
+
+    .to(
+      '.fv__image',
+      {
+        '--clip': 'inset(0% 0% 100% 0%)',
+        duration: 1,
+        ease: 'power4.inOut',
+      },
+      '-=0.5'
+    )
+    .fromTo(
+      '.network-animation__dot',
+      {
+        opacity: 0,
+        x: -5,
+        y: -5,
+      },
+      {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        ease: 'power4.inOut',
+        stagger: {
+          each: 0.01,
+          from: 'random',
+        },
+        onComplete: () => {
+          $('.network-animation').addClass('is-active');
+        },
+      },
+      '<'
+    )
+
+    .to(
+      '.fv__image img',
+      {
+        transform: 'scale(1)',
+        duration: 2.5,
+        ease: 'power3.out',
+      },
+      '<'
+    );
 });
