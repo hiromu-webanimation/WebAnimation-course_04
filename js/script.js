@@ -32,8 +32,6 @@ jQuery(function ($) {
 
   // 汎用アニメーション=========================-
   // セクションタイトル
-
-  // 全てのセクションタイトル要素を取得
   const sectionTitles = document.querySelectorAll('.js-section-title');
 
   sectionTitles.forEach((sectionTitle) => {
@@ -42,7 +40,6 @@ jQuery(function ($) {
 
     if (!jpElement || !enElement) return;
 
-    // 各要素に対してSplitTextを適用
     const splitTextJp = new SplitText(jpElement, {
       type: 'chars',
       tag: 'div',
@@ -116,6 +113,29 @@ jQuery(function ($) {
         ease: 'power4.inOut',
         scrollTrigger: {
           trigger: stagger,
+          start: 'top 90%',
+        },
+      }
+    );
+  });
+
+  // fadeIn
+
+  const fadeIns = document.querySelectorAll('.js-fadeIn');
+  fadeIns.forEach((fadeIn) => {
+    gsap.fromTo(
+      fadeIn,
+      {
+        opacity: 0,
+        y: 5,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power4.inOut',
+        scrollTrigger: {
+          trigger: fadeIn,
           start: 'top 90%',
         },
       }
