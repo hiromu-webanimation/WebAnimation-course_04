@@ -1396,13 +1396,37 @@ body {
   text-decoration: none;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  position: relative;
 }
-@media (any-hover: hover) {
-  .top-news__link:hover {
-    opacity: 0.7;
-  }
+.top-news__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: #a8b2c0;
+  z-index: 1;
+  -webkit-clip-path: inset(0% 90% 0% 0%);
+          clip-path: inset(0% 90% 0% 0%);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
 }
 
+@media (any-hover: hover) {
+  .top-news__link:hover .top-news__meta {
+    -webkit-transform: translateX(0.3125rem);
+            transform: translateX(0.3125rem);
+  }
+  .top-news__link:hover .top-news__text {
+    -webkit-transform: translateX(0.3125rem);
+            transform: translateX(0.3125rem);
+  }
+  .top-news__link:hover::after {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%);
+    opacity: 0.4;
+  }
+}
 .top-news__meta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1412,6 +1436,10 @@ body {
           align-items: center;
   gap: 24px;
   gap: 1.5rem;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+  position: relative;
+  z-index: 2;
 }
 
 .top-news__date {
@@ -1448,12 +1476,16 @@ body {
 }
 
 .top-news__text {
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #31363a;
+  position: relative;
+  z-index: 2;
 }
 @media screen and (max-width: 767px) {
   .top-news__text {
