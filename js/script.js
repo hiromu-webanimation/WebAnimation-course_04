@@ -295,6 +295,45 @@ jQuery(function ($) {
     }
   );
 
+  gsap.fromTo(
+    '.top-contact__image-svg',
+    {
+      scale: 1.8,
+      opacity: 0,
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 1.8,
+      ease: 'power2.inOut',
+      delay: 0.6,
+      scrollTrigger: {
+        trigger: '.top-contact__image-svg',
+        start: 'top 90%',
+      },
+    }
+  );
+
+  gsap.fromTo(
+    '.top-contact__image-svg .rect',
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power2.inOut',
+      delay: 1,
+      stagger: {
+        each: 0.07,
+      },
+      scrollTrigger: {
+        trigger: '.top-contact__image-svg',
+        start: 'top 90%',
+      },
+    }
+  );
+
   // ローダーアニメーション
   // セッション中に一度のみ再生
   const hasLoaderPlayed = sessionStorage.getItem('loaderPlayed');

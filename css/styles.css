@@ -1667,6 +1667,7 @@ body {
   padding: 72px 337px 72px 80px;
   padding: 4.5rem 21.0625rem 4.5rem 5rem;
   position: relative;
+  overflow: hidden;
 }
 
 .top-contact__image {
