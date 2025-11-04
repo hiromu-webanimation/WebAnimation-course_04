@@ -1067,6 +1067,12 @@ body {
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  --before-color: #444950;
+  --clip-path: inset(0% 100% 0% 0%);
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
+  --x: 0%;
+  overflow: hidden;
 }
 .top-company__link::before {
   counter-increment: number 1;
@@ -1076,15 +1082,31 @@ body {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 2;
-  color: #444950;
+  color: var(--before-color);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  z-index: 2;
 }
-@media (any-hover: hover) {
-  .top-company__link:hover {
-    background-color: rgb(201, 201, 201);
-  }
+.top-company__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#184473), to(#468ea8));
+  background: linear-gradient(90deg, #184473 0%, #468ea8 100%);
+  z-index: 1;
+  -webkit-clip-path: var(--clip-path);
+          clip-path: var(--clip-path);
+  -webkit-transform: translateX(var(--x));
+          transform: translateX(var(--x));
+}
+.top-company__link span {
+  position: relative;
+  z-index: 2;
 }
 
 .top-company__label {
@@ -1098,6 +1120,10 @@ body {
   font-weight: 400;
   line-height: 2;
   color: #31363a;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
 }
 
 .top-company__arrow {
@@ -1114,6 +1140,8 @@ body {
           mask-size: contain;
   -webkit-mask-position: center;
           mask-position: center;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
 }
 
 .top-company__image {

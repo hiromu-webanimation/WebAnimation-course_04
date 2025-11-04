@@ -239,6 +239,11 @@ body {
   justify-content: space-between;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  --before-color: #444950;
+  --clip-path: inset(0% 100% 0% 0%);
+  clip-path: inset(0% 0% 0% 0%);
+  --x: 0%;
+  overflow: hidden;
   &::before {
     counter-increment: number 1;
     content: '0' counter(number);
@@ -246,13 +251,27 @@ body {
     font-size: rem(20);
     font-weight: var(--regular);
     line-height: 2;
-    color: #444950;
+    color: var(--before-color);
     width: fit-content;
+    z-index: 2;
   }
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: rgb(201, 201, 201);
-    }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #184473 0%, #468ea8 100%);
+    z-index: 1;
+    clip-path: var(--clip-path);
+    transform: translateX(var(--x));
+  }
+  span {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -264,6 +283,9 @@ body {
   font-weight: var(--regular);
   line-height: 2;
   color: #31363a;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease-in-out all;
 }
 
 .top-company__arrow {
@@ -275,6 +297,7 @@ body {
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
+  transition: 0.3s ease-in-out all;
 }
 
 .top-company__image {

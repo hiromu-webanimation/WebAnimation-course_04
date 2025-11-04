@@ -218,6 +218,34 @@ jQuery(function ($) {
     );
   });
 
+  // linkホバー
+
+  let mm = gsap.matchMedia();
+
+  mm.add('(min-width: 768px)', () => {
+    $('.top-company__link').on('mouseenter', function () {
+      gsap.set($(this), {
+        '--clip-path': 'inset(0% 100% 0% 0%)',
+        '--x': '0%',
+      });
+      gsap.to($(this), {
+        '--clip-path': 'inset(0% 0% 0% 0%)',
+        duration: 0.3,
+        ease: 'power4.inOut',
+      });
+    });
+    $('.top-company__link').on('mouseleave', function () {
+      gsap.to($(this), {
+        '--clip-path': 'inset(0% 0% 0% 0%)',
+      });
+      gsap.to($(this), {
+        '--x': '100%',
+        duration: 0.3,
+        ease: 'power4.inOut',
+      });
+    });
+  });
+
   // あしらい
   gsap.fromTo(
     '.top-company__list-dec rect',
